@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="in.bmsit.bmsit.Message">
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="All Branches"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/checkBox2" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CSE"
+        android:layout_marginTop="40dp"
+        android:id="@+id/chkcse"
+        android:layout_below="@+id/checkBox2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:layout_alignRight="@+id/chkstud"
+        android:layout_alignEnd="@+id/chkstud" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ECE"
+        android:id="@+id/chkece"
+        android:layout_toEndOf="@+id/chkhod"
+        android:layout_toRightOf="@+id/chkhod"
+        android:checked="false"
+        android:layout_alignTop="@+id/chkcse"
+        android:layout_alignLeft="@+id/chkmech"
+        android:layout_alignStart="@+id/chkmech"
+        android:layout_alignRight="@+id/chkmech"
+        android:layout_alignEnd="@+id/chkmech" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ISE"
+        android:layout_marginTop="10dp"
+        android:id="@+id/chkisee"
+        android:layout_below="@+id/chkcse"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:layout_alignRight="@+id/chkcse"
+        android:layout_alignEnd="@+id/chkcse" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mech"
+        android:id="@+id/chkmech"
+        android:layout_toEndOf="@+id/chkfac"
+        android:checked="false"
+        android:layout_alignTop="@+id/chkisee"
+        android:layout_toRightOf="@+id/chkfac" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EEE"
+        android:id="@+id/chkeee"
+        android:checked="false"
+        android:layout_toEndOf="@+id/chkstud"
+        android:layout_toRightOf="@+id/chkstud"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/chkisee"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/chkisee"
+        android:layout_alignEnd="@+id/chkisee" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TCE"
+        android:id="@+id/chktce"
+        android:layout_toEndOf="@+id/chkeee"
+        android:layout_toRightOf="@+id/chkeee"
+        android:checked="false"
+        android:layout_alignTop="@+id/chkeee"
+        android:layout_alignLeft="@+id/chkmech"
+        android:layout_alignStart="@+id/chkmech"
+        android:layout_alignRight="@+id/chkmech"
+        android:layout_alignEnd="@+id/chkmech" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Civil"
+        android:layout_marginTop="10dp"
+        android:id="@+id/chkciv"
+        android:layout_below="@+id/chkeee"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false"
+        android:layout_alignRight="@+id/chkeee"
+        android:layout_alignEnd="@+id/chkeee" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Head of deaprtments"
+        android:layout_marginTop="40dp"
+        android:id="@+id/chkhod"
+        android:layout_below="@+id/chkciv"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Faculty Members"
+        android:layout_marginTop="10dp"
+        android:id="@+id/chkfac"
+        android:layout_below="@+id/chkhod"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Students"
+        android:layout_marginTop="10dp"
+        android:id="@+id/chkstud"
+        android:layout_below="@+id/chkfac"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:checked="false" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:id="@+id/bContinue"
+        android:background="@drawable/button"
+        android:textAllCaps="true"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

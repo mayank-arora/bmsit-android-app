@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="in.bmsit.bmsit" >
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".Login"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Broadcast"
+            android:label="@string/title_activity_broadcast" >
+            <intent-filter>
+                <action android:name=".Broadcast" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home" >
+            <intent-filter>
+                <action android:name=".Home" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Message"
+            android:label="@string/title_activity_message"
+            android:parentActivityName=".Broadcast" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.bmsit.bmsit.Broadcast" />
+
+            <intent-filter>
+                <action android:name=".Message" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Send"
+            android:label="@string/title_activity_send"
+            android:parentActivityName=".Message" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.bmsit.bmsit.Message" />
+
+            <intent-filter>
+                <action android:name=".Send" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Pinboard"
+            android:label="@string/title_activity_pinboard"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.bmsit.bmsit.Home" />
+
+            <intent-filter>
+                <action android:name=".Pinboard" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Search"
+            android:label="@string/title_activity_search"
+            android:parentActivityName=".Home" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.bmsit.bmsit.Home" />
+
+            <intent-filter>
+                <action android:name=".Search" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Register"
+            android:label="@string/title_activity_register"
+            android:parentActivityName=".Login" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="in.bmsit.bmsit.Login" />
+            <intent-filter>
+                <action android:name=".Register"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
