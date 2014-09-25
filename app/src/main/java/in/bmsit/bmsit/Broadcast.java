@@ -1,6 +1,7 @@
 package in.bmsit.bmsit;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +18,10 @@ public class Broadcast extends ActionBarActivity {
         setContentView(R.layout.activity_broadcast);
         final Button bBroad = (Button)findViewById(R.id.bBroadcast);
         Button bSkip = (Button)findViewById(R.id.bSkip);
+        SharedPreferences sharedPreferences=getSharedPreferences("in.bmsit.bmsit.MYPREFS",
+                MODE_PRIVATE);
+        String acc=sharedPreferences.getString("ACCESS_TOKEN","Non existent");
+        bBroad.setText(acc);
         bSkip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
