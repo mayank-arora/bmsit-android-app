@@ -47,7 +47,7 @@ public class Login extends ActionBarActivity {
                 if(networkInfo!=null && networkInfo.isConnected()){
                     id=eId.getText().toString();
                     password=ePass.getText().toString();
-                    url="http://192.168.0.105:4567/token?user_id="+id+"&password="+password;
+                    url="http://192.168.0.102:4567/token?user_id="+id+"&password="+password;
                     progressBar.setVisibility(View.VISIBLE);
                     bLogin.setEnabled(false);
                     new Authenticate().execute(url);

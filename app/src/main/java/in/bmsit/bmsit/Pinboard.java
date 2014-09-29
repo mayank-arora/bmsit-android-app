@@ -4,25 +4,53 @@ import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
 import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 public class Pinboard extends ActionBarActivity {
     ListView lv;
-    String values[] ={"Internal Test Dates","Holidays in August",
+    String title[] ={"Internal Test Dates","Holidays in 2014-2015",
             "Second Internal Test Dates","Seminars And Events","Revaluation Results Announced",
             "Test Announcment One","Test Announcment Two","Test Announcment Three",
             "Test Announcment Four"};
+    String body[]={"It is hereby informed to the students that the First Internal Tests dates" +
+            " have been finalized and is attached to this announcement as an image.","The following" +
+            " attached picture is the holiday schedule for the 2013-2015 session","It is hereby" +
+            " informed to the students that the Second Internal Tests dates have been finalized" +
+            " and is attached to this announcement as an image.","The following Talks and Events" +
+            " are scheduled to be organized in our college by various organizations","Test" +
+            " Announcement One","Test Announcement Two","Test Announcement Three","Test" +
+            " Announcement Four"};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pinboard);
          lv= (ListView)findViewById(R.id.listView);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,R.layout.card_row,R.id.listTitle,
-                values);
-        lv.setAdapter(adapter);
+        ArrayList<Card> arrayList = new ArrayList<Card>();
+        CustomAdapter customAdapter = new CustomAdapter(this,arrayList);
+        arrayList.add(0,new Card("Internal Test Dates","It is hereby informed to the students" +
+                " that the First Internal Tests dates" +
+                " have been finalized and is attached to this announcement as an image."));
+        arrayList.add(1,new Card("Holidays in 2014-2015","The following" +
+                " attached picture is the holiday schedule for the 2013-2015 session"));
+        arrayList.add(2,new Card("Second Internal Test Dates","It is hereby" +
+                " informed to the students that the Second Internal Tests dates have been finalized" +
+                " and is attached to this announcement as an image."));
+        arrayList.add(3,new Card("Seminars And Events","The following Talks and Events" +
+                " are scheduled to be organized in our college by various organizations"));
+        arrayList.add(4,new Card("Revaluation Results Announced","It is hereby informed to the" +
+                "students that the revaluation results have been announced and the attached link is" +
+                "provided"));
+        arrayList.add(4,new Card("Test Announcment One","Test Announcment One"));
+        arrayList.add(5,new Card("Test Announcment Two","Test Announcment Two"));
+        arrayList.add(6,new Card("Test Announcment Three","Test Announcment Three"));
+        arrayList.add(7,new Card("Test Announcment Four","Test Announcment Four"));
+
+        lv.setAdapter(customAdapter);
     }
 
 

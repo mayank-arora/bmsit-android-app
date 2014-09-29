@@ -9,6 +9,7 @@
     <item
         android:id="@+id/action_camera"
         android:title="Take a photo"
+        android:icon="@drawable/abc_ic_menu_share_holo_dark"
         android:orderInCategory="1"
         in.bmsit.bmsit:showAsAction="ifRoom"/>
 </menu>
