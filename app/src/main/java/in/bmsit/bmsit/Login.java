@@ -38,6 +38,8 @@ public class Login extends ActionBarActivity {
         final EditText ePass = (EditText)findViewById(R.id.editPass);
         final Button bLogin = (Button)findViewById(R.id.bLogin);
         final Button bReg = (Button)findViewById(R.id.bRegister);
+        eId.setText("asdf");
+        ePass.setText("asdf");
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -47,7 +49,7 @@ public class Login extends ActionBarActivity {
                 if(networkInfo!=null && networkInfo.isConnected()){
                     id=eId.getText().toString();
                     password=ePass.getText().toString();
-                    url="http://192.168.0.102:4567/token?user_id="+id+"&password="+password;
+                    url="http://lit-waters-5017.herokuapp.com/token?user_id="+id+"&password="+password;
                     progressBar.setVisibility(View.VISIBLE);
                     bLogin.setEnabled(false);
                     new Authenticate().execute(url);
@@ -123,7 +125,7 @@ public class Login extends ActionBarActivity {
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
                 httpURLConnection.setConnectTimeout(20000);
                 httpURLConnection.setReadTimeout(20000);
-                httpURLConnection.setRequestMethod("GET");
+                httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoInput(true);
                 httpURLConnection.connect();
                 int response = httpURLConnection.getResponseCode();
