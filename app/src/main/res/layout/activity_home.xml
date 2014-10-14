@@ -15,7 +15,7 @@
         android:id="@+id/bLib"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="40dp"
         android:background="@drawable/button"
         android:textAllCaps="true"
         android:textColor="#fff"/>

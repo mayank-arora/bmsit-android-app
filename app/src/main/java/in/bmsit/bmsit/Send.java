@@ -45,7 +45,7 @@ public class Send extends ActionBarActivity {
 
                 // downsizing image as it throws OutOfMemory Exception for larger
                 // images
-                options.inSampleSize = 4;
+                options.inSampleSize = 8;
 
                 final Bitmap bitmap = BitmapFactory.decodeFile(fileUri.getPath(),
                         options);
@@ -62,6 +62,7 @@ public class Send extends ActionBarActivity {
             @Override
             public void onClick(View view) {
                 Context context = getApplicationContext();
+                
                 CharSequence text = "Message sent";
                 int duration = Toast.LENGTH_SHORT;
                 Toast toast = Toast.makeText(context, text, duration);
